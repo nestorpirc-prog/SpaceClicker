@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en>
 
+<html lang="en">
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Space Clicker</title>
 
@@ -14,9 +15,9 @@
 <body>
 
 <div class="stars"></div>
+<div class="meteors"></div>
 
 <div class="moon"></div>
-
 <div class="sun"></div>
 
 <header>
@@ -24,32 +25,55 @@
 <h1>🚀 Space Clicker</h1>
 
 <p class="subtitle">
-Build your cosmic empire by clicking energy from the universe.
+Click your way through the galaxy and build the most powerful cosmic empire.
 </p>
 
 </header>
 
-<section>
+<section class="about">
 
-<h2>About the Game</h2>
+<h2>About The Game</h2>
 
 <p>
-Space Clicker is a relaxing yet addictive cosmic clicking game.
-With every click you generate stellar energy which allows you to
-upgrade your space technology and explore deeper regions of the universe.
+Space Clicker is a relaxing but incredibly addictive space-themed clicking
+game where every click generates cosmic energy.
 </p>
 
 <p>
-Discover mysterious planets, unlock powerful cosmic upgrades,
-and build a futuristic interstellar civilization powered by
-infinite cosmic energy.
+In the beginning you simply click a planet to generate energy,
+but as the game progresses you unlock powerful upgrades,
+discover mysterious planets, and build advanced interstellar technology.
 </p>
 
 <p>
-Designed with smooth animations and atmospheric visuals,
-Space Clicker offers an immersive experience where
-every click brings you closer to controlling the galaxy.
+Travel across galaxies, expand your energy production,
+and transform a tiny cosmic station into a massive
+space civilization powered by infinite stellar energy.
 </p>
+
+<p>
+With smooth animations, atmospheric visuals,
+and satisfying gameplay progression,
+Space Clicker delivers a unique experience
+for both casual players and hardcore clicker fans.
+</p>
+
+</section>
+
+<section class="features">
+
+<h2>Game Features</h2>
+
+<div class="featureGrid">
+
+<div class="feature">🌌 Beautiful animated space atmosphere</div>
+<div class="feature">⚡ Fast and satisfying click gameplay</div>
+<div class="feature">🪐 Unlock planets and galaxies</div>
+<div class="feature">🚀 Upgrade futuristic space technology</div>
+<div class="feature">💎 Discover rare cosmic resources</div>
+<div class="feature">🌠 Relaxing ambient visuals</div>
+
+</div>
 
 </section>
 
@@ -57,13 +81,21 @@ every click brings you closer to controlling the galaxy.
 
 <h2>Mini Click Game</h2>
 
+<p>Click the planet to generate energy!</p>
+
 <div class="planetButton" id="planet"></div>
 
-<p>Energy: <span id="score">0</span></p>
+<p class="score">
+Energy: <span id="score">0</span>
+</p>
 
 </section>
 
-<button onclick="downloadGame()">Download Game</button>
+<section class="download">
+
+<button onclick="downloadGame()">Download Space Clicker</button>
+
+</section>
 
 <footer>
 
@@ -74,5 +106,4 @@ Space Clicker © 2026
 <script src="script.js"></script>
 
 </body>
-
 </html>
