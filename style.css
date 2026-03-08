@@ -126,17 +126,52 @@ z-index:-1;
 
 .sun{
 position:fixed;
-bottom:-250px;
+bottom:-350px; /* половина схована */
 left:50%;
 transform:translateX(-50%);
-width:700px;
-height:700px;
+
+width:900px;
+height:900px;
+
 border-radius:50%;
-background:radial-gradient(circle,#ffcc00,#ff5500);
-box-shadow:0 0 300px orange;
-animation:sunGlow 5s infinite alternate;
+
+background:radial-gradient(
+circle,
+#fff6a0 0%,
+#ffd000 30%,
+#ff8c00 60%,
+#ff4500 100%
+);
+
+box-shadow:
+0 0 200px #ffcc00,
+0 0 400px #ff9900,
+0 0 600px #ff5500,
+0 0 900px #ff2200;
+
+animation:sunGlow 6s ease-in-out infinite alternate;
+
 z-index:-2;
 }
+
+@keyframes sunGlow{
+
+0%{
+box-shadow:
+0 0 150px #ffcc00,
+0 0 350px #ff9900,
+0 0 600px #ff5500;
+}
+
+100%{
+box-shadow:
+0 0 250px #ffcc00,
+0 0 500px #ff8800,
+0 0 900px #ff3300;
+}
+
+}
+
 
 @keyframes sunGlow{
 from{box-shadow:0 0 200px orange}
