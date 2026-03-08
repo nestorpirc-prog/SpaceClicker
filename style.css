@@ -1,14 +1,16 @@
 body{
 margin:0;
-font-family:Arial;
+font-family:Segoe UI;
+background:#02010a;
 color:white;
-background:linear-gradient(180deg,#020111,#000000);
+text-align:center;
 overflow-x:hidden;
 }
 
+/* HEADER */
+
 header{
-text-align:center;
-padding:50px;
+padding:80px 20px;
 }
 
 h1{
@@ -16,37 +18,143 @@ font-size:60px;
 text-shadow:0 0 20px cyan;
 }
 
-.container{
-display:flex;
-justify-content:center;
-gap:30px;
-flex-wrap:wrap;
-padding:40px;
+.subtitle{
+opacity:0.8;
+font-size:20px;
+}
+
+/* SECTIONS */
+
+section{
+max-width:900px;
+margin:auto;
+padding:60px 20px;
+line-height:1.6;
+}
+
+/* FEATURES */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-top:30px;
 }
 
 .card{
+padding:25px;
+border-radius:15px;
 background:rgba(255,255,255,0.05);
 backdrop-filter:blur(10px);
-border-radius:20px;
-padding:30px;
-width:260px;
-transition:0.3s;
+transition:0.4s;
 box-shadow:0 0 20px rgba(0,255,255,0.2);
 }
 
 .card:hover{
-transform:scale(1.08);
-box-shadow:0 0 40px cyan;
+transform:translateY(-10px) scale(1.05);
+box-shadow:0 0 30px cyan;
 }
 
+/* PLANETS BACKGROUND */
+
+.space{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+z-index:-1;
+overflow:hidden;
+}
+
+.planet{
+position:absolute;
+border-radius:50%;
+opacity:0.8;
+}
+
+/* PLANET 1 */
+
+.planet1{
+width:200px;
+height:200px;
+background:radial-gradient(circle,#00ffff,#0033ff);
+top:10%;
+left:5%;
+animation:float1 40s linear infinite;
+}
+
+/* PLANET 2 */
+
+.planet2{
+width:150px;
+height:150px;
+background:radial-gradient(circle,#ff00ff,#440044);
+top:60%;
+left:80%;
+animation:float2 60s linear infinite;
+}
+
+/* PLANET 3 */
+
+.planet3{
+width:120px;
+height:120px;
+background:radial-gradient(circle,#ffaa00,#442200);
+top:40%;
+left:50%;
+animation:float3 50s linear infinite;
+}
+
+@keyframes float1{
+0%{transform:translateY(0)}
+50%{transform:translateY(80px)}
+100%{transform:translateY(0)}
+}
+
+@keyframes float2{
+0%{transform:translateY(0)}
+50%{transform:translateY(-120px)}
+100%{transform:translateY(0)}
+}
+
+@keyframes float3{
+0%{transform:translateX(0)}
+50%{transform:translateX(100px)}
+100%{transform:translateX(0)}
+}
+
+/* MINI GAME */
+
+.clickPlanet{
+width:160px;
+height:160px;
+margin:30px auto;
+border-radius:50%;
+background:radial-gradient(circle,#00ffff,#001aff);
+cursor:pointer;
+transition:0.15s;
+box-shadow:0 0 30px cyan;
+}
+
+.clickPlanet:hover{
+transform:scale(1.1);
+}
+
+.clickPlanet:active{
+transform:scale(0.9);
+}
+
+/* BUTTON */
+
 button{
-padding:15px 30px;
+padding:18px 40px;
+font-size:18px;
 border:none;
 border-radius:12px;
-font-size:18px;
-cursor:pointer;
 background:linear-gradient(45deg,#00ffff,#0066ff);
 color:white;
+cursor:pointer;
 transition:0.3s;
 }
 
@@ -56,23 +164,6 @@ box-shadow:0 0 20px cyan;
 }
 
 footer{
-text-align:center;
-padding:30px;
+padding:40px;
 opacity:0.6;
-}
-
-/* stars */
-
-.stars{
-position:fixed;
-width:100%;
-height:100%;
-background:url("https://www.transparenttextures.com/patterns/stardust.png");
-animation:moveStars 100s linear infinite;
-z-index:-1;
-}
-
-@keyframes moveStars{
-from{background-position:0 0;}
-to{background-position:10000px 5000px;}
 }
