@@ -1,7 +1,6 @@
 let score = 0
 
 const planet = document.getElementById("planet")
-
 const scoreText = document.getElementById("score")
 
 planet.onclick = function(){
@@ -12,20 +11,18 @@ scoreText.innerText = score
 
 }
 
-/* EASTER EGG */
+/* Easter egg */
 
-document.addEventListener("keydown", function(e){
+document.addEventListener("keydown",function(e){
 
-if(e.key === "s"){
-
-alert("🌌 Secret discovered! Welcome, space explorer!")
-
+if(e.key === "u"){
+alert("🚀 Secret unlocked: Cosmic Explorer!")
 }
 
 })
 
 function downloadGame(){
 
-alert("🚀 Download coming soon!")
+alert("Download coming soon 🚀")
 
 }
