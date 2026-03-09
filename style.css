@@ -107,17 +107,13 @@ margin-top:10px;
 }
 
 .telegram a{
-display:inline-flex;
-align-items:center;
-gap:6px;
 text-decoration:none;
-color:white;
+color:#00ffff;
 font-size:14px;
 }
 
-.tgicon{
-width:18px;
-height:18px;
+.telegram a:hover{
+text-shadow:0 0 10px cyan;
 }
 
 /* GAME */
