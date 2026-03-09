@@ -158,39 +158,35 @@ left:110%;
 top:250px;
 }
 .telegram{
-display:flex;
-justify-content:center;
-margin-top:20px;
+text-align:center;
+margin-top:15px;
 }
 
 .telegram a{
-display:flex;
+display:inline-flex;
 align-items:center;
-gap:8px;
+gap:6px;
 
-text-decoration:none;
-font-size:14px;
-
+font-size:13px;
 color:white;
+text-decoration:none;
 
 background:rgba(255,255,255,0.06);
 
-padding:6px 12px;
+padding:5px 10px;
 
-border-radius:8px;
+border-radius:6px;
 
-transition:0.25s;
-
-box-shadow:0 0 8px rgba(0,255,255,0.2);
+transition:0.2s;
 }
 
 .telegram a:hover{
 transform:scale(1.05);
-box-shadow:0 0 14px cyan;
 }
 
 .telegram img{
-width:18px;
+width:16px;
+height:16px;
 }
 
 
