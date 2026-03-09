@@ -1,89 +1,177 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Space Clicker</title>
+<title>SpaceClicker</title>
 
-<link rel="stylesheet" href="style.css">
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(#02020a,#0a0a2a);
+color:white;
+text-align:center;
+}
+
+/* HEADER */
+
+header{
+padding:100px 20px;
+}
+
+h1{
+font-size:60px;
+color:#00ffff;
+text-shadow:0 0 20px cyan;
+}
+
+.subtitle{
+font-size:20px;
+opacity:0.8;
+}
+
+/* SECTIONS */
+
+section{
+max-width:900px;
+margin:auto;
+padding:40px;
+}
+
+/* CARD */
+
+.card{
+background:rgba(255,255,255,0.05);
+padding:40px;
+border-radius:20px;
+margin-top:40px;
+box-shadow:0 0 20px rgba(0,255,255,0.2);
+}
+
+/* DOWNLOAD BUTTON */
+
+.download{
+display:inline-block;
+margin-top:20px;
+padding:16px 45px;
+font-size:18px;
+border-radius:12px;
+background:linear-gradient(45deg,#00ffff,#0077ff);
+color:white;
+text-decoration:none;
+box-shadow:0 0 20px cyan;
+transition:0.3s;
+}
+
+.download:hover{
+transform:scale(1.1);
+box-shadow:0 0 35px #00ffff;
+}
+
+/* PLANET GAME */
+
+.planet{
+width:150px;
+height:150px;
+margin:30px auto;
+border-radius:50%;
+background:radial-gradient(circle,#00ffff,#0033ff);
+box-shadow:0 0 40px cyan;
+cursor:pointer;
+transition:0.2s;
+}
+
+.planet:hover{
+transform:scale(1.1);
+}
+
+/* FOOTER */
+
+footer{
+padding:40px;
+opacity:0.6;
+}
+
+</style>
 
 </head>
 
 <body>
 
-<div class="stars"></div>
-<div class="meteors"></div>
-
-<div class="moon"></div>
-<div class="sun"></div>
-<div class="ship">🛰</div>
-
 <header>
 
-<h1>🚀 Space Clicker</h1>
+<h1>SpaceClicker</h1>
 
 <p class="subtitle">
-Click your way through the galaxy and build the most powerful cosmic empire.
+Explore the galaxy. Discover new worlds. Survive the unknown.
 </p>
+
+<a class="download" href="https://github.com/nestorpirc-prog/SpaceClicker/releases/download/v1.0/SpaceClicker.apk">
+⬇ Download for Android
+</a>
 
 </header>
 
-<div class="telegram">
+<section>
 
-<a href="https://t.me/SpaceClickerx" target="_blank">
+<div class="card">
 
-<span>SpaceClickerx</span>
+<h2>About the Game</h2>
 
-</a>
+<p>
+SpaceClicker is a simple but fun space-themed clicker game where you collect energy by clicking on planets.
+Your mission is to explore space, gather resources, and become the most powerful explorer in the galaxy.
+</p>
+
+<p>
+Each click gives you energy that you can use to progress further and discover more of the universe.
+The game is designed to be relaxing and satisfying while giving players a small taste of cosmic exploration.
+</p>
+
+<p>
+Whether you want to play for a few minutes or spend time collecting massive amounts of energy,
+SpaceClicker offers a simple but addictive gameplay experience.
+</p>
 
 </div>
 
-<section>
+<div class="card">
 
-<h2>About The Game</h2>
+<h2>Mini Game</h2>
 
-<p>
-Space Clicker is a relaxing but addictive cosmic clicking game where
-every click generates stellar energy. Expand your interstellar empire,
-unlock new planets, and upgrade futuristic space technologies.
-</p>
+<p>Click the planet to earn points.</p>
 
-<p>
-Build powerful energy generators, explore distant galaxies,
-and transform a tiny station into a massive cosmic civilization.
-</p>
+<div class="planet" onclick="clickPlanet()"></div>
+
+<p id="score">Score: 0</p>
+
+</div>
 
 </section>
-
-<section class="game">
-
-<h2>Mini Click Game</h2>
-
-<p>Click the planet to generate energy</p>
-
-<div class="planetButton" id="planet"></div>
-
-<p>Energy: <span id="score">0</span></p>
-
-</section>
-
-<a href="https://github.com/nestorpirc-prog/SpaceClicker/releases/download/v1.0/SpaceClicker.apk">
-
-<button>Download Game (APK)</button>
-
-</a>
-
 
 <footer>
 
-Space Clicker © 2026
+<p>© 2026 SpaceClicker</p>
 
 </footer>
 
-<script src="script.js"></script>
+<script>
+
+let score = 0;
+
+function clickPlanet(){
+score++;
+document.getElementById("score").innerText = "Score: " + score;
+}
+
+</script>
 
 </body>
+
 </html>
