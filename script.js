@@ -11,18 +11,20 @@ scoreText.innerText = score
 
 }
 
-/* Easter egg */
+/* easter egg */
 
 document.addEventListener("keydown",function(e){
 
-if(e.key === "u"){
-alert("🚀 Secret unlocked: Cosmic Explorer!")
+if(e.key === "g"){
+
+alert("🌌 Secret discovered! Galactic explorer unlocked!")
+
 }
 
 })
 
 function downloadGame(){
 
-alert("Download coming soon 🚀")
+alert("🚀 Download coming soon!")
 
 }
