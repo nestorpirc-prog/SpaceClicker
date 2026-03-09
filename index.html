@@ -11,91 +11,175 @@
 
 <style>
 
+/* ---------- BODY ---------- */
+
 body{
 margin:0;
-font-family:Arial;
-background:linear-gradient(#02020a,#0a0a2a);
+font-family:Arial, sans-serif;
 color:white;
 text-align:center;
+background:#02020a;
+overflow-x:hidden;
 }
 
-/* HEADER */
+/* ---------- STAR BACKGROUND ---------- */
 
-header{
-padding:100px 20px;
-}
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+background-image:
+radial-gradient(white 1px, transparent 1px),
+radial-gradient(white 1px, transparent 1px),
+radial-gradient(white 2px, transparent 2px);
+background-size:
+80px 80px,
+120px 120px,
+200px 200px;
 
-h1{
-font-size:60px;
-color:#00ffff;
-text-shadow:0 0 20px cyan;
-}
+animation:moveStars 120s linear infinite;
 
-.subtitle{
-font-size:20px;
+z-index:-1;
 opacity:0.8;
 }
 
-/* SECTIONS */
-
-section{
-max-width:900px;
-margin:auto;
-padding:40px;
+@keyframes moveStars{
+from{transform:translateY(0);}
+to{transform:translateY(-2000px);}
 }
 
-/* CARD */
+/* ---------- HEADER ---------- */
+
+header{
+padding:80px 20px 40px 20px;
+}
+
+h1{
+font-size:48px;
+color:#00ffff;
+text-shadow:0 0 20px cyan;
+margin-bottom:10px;
+}
+
+.subtitle{
+opacity:0.8;
+font-size:18px;
+}
+
+/* ---------- CARD ---------- */
 
 .card{
+
 background:rgba(255,255,255,0.05);
-padding:40px;
-border-radius:20px;
-margin-top:40px;
-box-shadow:0 0 20px rgba(0,255,255,0.2);
+
+margin:30px auto;
+
+padding:30px;
+
+border-radius:18px;
+
+max-width:700px;
+
+box-shadow:0 0 25px rgba(0,255,255,0.15);
+
+backdrop-filter:blur(6px);
+
 }
 
-/* DOWNLOAD BUTTON */
+/* ---------- DOWNLOAD BUTTON ---------- */
 
 .download{
+
 display:inline-block;
+
 margin-top:20px;
+
 padding:16px 45px;
+
 font-size:18px;
+
 border-radius:12px;
+
 background:linear-gradient(45deg,#00ffff,#0077ff);
+
 color:white;
+
 text-decoration:none;
+
 box-shadow:0 0 20px cyan;
+
 transition:0.3s;
+
 }
 
 .download:hover{
-transform:scale(1.1);
-box-shadow:0 0 35px #00ffff;
+
+transform:scale(1.08);
+
+box-shadow:0 0 40px #00ffff;
+
 }
 
-/* PLANET GAME */
+/* ---------- TELEGRAM ---------- */
 
-.planet{
-width:150px;
-height:150px;
-margin:30px auto;
-border-radius:50%;
-background:radial-gradient(circle,#00ffff,#0033ff);
-box-shadow:0 0 40px cyan;
-cursor:pointer;
-transition:0.2s;
+.telegram{
+
+margin-top:15px;
+
+font-size:16px;
+
 }
 
-.planet:hover{
-transform:scale(1.1);
+.telegram a{
+
+color:#00ffff;
+
+text-decoration:none;
+
 }
 
-/* FOOTER */
+.telegram a:hover{
+
+text-shadow:0 0 10px cyan;
+
+}
+
+/* ---------- FOOTER ---------- */
 
 footer{
-padding:40px;
+
+margin-top:40px;
+
+padding:30px;
+
 opacity:0.6;
+
+font-size:14px;
+
+}
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:600px){
+
+h1{
+font-size:34px;
+}
+
+.subtitle{
+font-size:16px;
+}
+
+.card{
+margin:20px;
+padding:25px;
+}
+
+.download{
+padding:14px 30px;
+font-size:16px;
+}
+
 }
 
 </style>
@@ -104,73 +188,54 @@ opacity:0.6;
 
 <body>
 
+<div class="stars"></div>
+
 <header>
 
 <h1>SpaceClicker</h1>
 
 <p class="subtitle">
-Explore the galaxy. Discover new worlds. Survive the unknown.
+Explore the galaxy. Discover new worlds. Become the ultimate space explorer.
 </p>
 
 <a class="download" href="https://github.com/nestorpirc-prog/SpaceClicker/releases/download/v1.0/SpaceClicker.apk">
 ⬇ Download for Android
 </a>
 
-</header>
+<div class="telegram">
 
-<section>
+Join our Telegram: <a href="https://t.me/SpaceClickerGame" target="_blank">
+@SpaceClickerGame </a>
+
+</div>
+
+</header>
 
 <div class="card">
 
 <h2>About the Game</h2>
 
 <p>
-SpaceClicker is a simple but fun space-themed clicker game where you collect energy by clicking on planets.
-Your mission is to explore space, gather resources, and become the most powerful explorer in the galaxy.
+SpaceClicker is a simple and relaxing space themed clicker game where you collect energy and explore the endless universe. 
+Your goal is to travel through space, discover planets, and become the greatest explorer in the galaxy.
 </p>
 
 <p>
-Each click gives you energy that you can use to progress further and discover more of the universe.
-The game is designed to be relaxing and satisfying while giving players a small taste of cosmic exploration.
+The game focuses on simple gameplay that anyone can enjoy. 
+Tap to collect energy, progress through space, and unlock new discoveries as you continue your journey through the stars.
 </p>
 
 <p>
-Whether you want to play for a few minutes or spend time collecting massive amounts of energy,
-SpaceClicker offers a simple but addictive gameplay experience.
+SpaceClicker is designed for quick fun sessions while still giving players a sense of exploration and progress in a mysterious cosmic world.
 </p>
 
 </div>
-
-<div class="card">
-
-<h2>Mini Game</h2>
-
-<p>Click the planet to earn points.</p>
-
-<div class="planet" onclick="clickPlanet()"></div>
-
-<p id="score">Score: 0</p>
-
-</div>
-
-</section>
 
 <footer>
 
 <p>© 2026 SpaceClicker</p>
 
 </footer>
-
-<script>
-
-let score = 0;
-
-function clickPlanet(){
-score++;
-document.getElementById("score").innerText = "Score: " + score;
-}
-
-</script>
 
 </body>
 
