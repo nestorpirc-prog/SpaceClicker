@@ -157,6 +157,51 @@ top:120px;
 left:110%;
 top:250px;
 }
+.telegram{
+
+display:flex;
+justify-content:center;
+margin-top:30px;
+
+}
+
+.telegram a{
+
+display:flex;
+align-items:center;
+gap:10px;
+
+text-decoration:none;
+font-size:20px;
+color:white;
+
+background:rgba(255,255,255,0.08);
+
+padding:12px 22px;
+
+border-radius:12px;
+
+transition:0.3s;
+
+box-shadow:0 0 20px rgba(0,255,255,0.2);
+
+}
+
+.telegram a:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 25px #00ffff;
+
+}
+
+.telegram img{
+
+width:28px;
+
+filter:drop-shadow(0 0 6px cyan);
+
+}
 
 }
 
