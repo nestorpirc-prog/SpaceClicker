@@ -102,6 +102,43 @@ box-shadow:
 z-index:-2;
 }
 
+
+.support-button{
+
+position:fixed;
+
+bottom:20px;
+
+right:20px;
+
+background:linear-gradient(45deg,#ff4d6d,#ff0066);
+
+color:white;
+
+padding:14px 22px;
+
+border-radius:30px;
+
+font-size:16px;
+
+text-decoration:none;
+
+box-shadow:0 0 20px rgba(255,0,100,0.6);
+
+transition:0.3s;
+
+z-index:999;
+
+}
+
+.support-button:hover{
+
+transform:scale(1.1);
+
+box-shadow:0 0 30px #ff0066;
+
+}
+
 /* MOON */
 
 .moon{
