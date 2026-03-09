@@ -11,85 +11,86 @@
 
 <style>
 
-<a href="support.html" class="support-button">
-❤️ Support
-</a>
+/* BODY */
 
-  
 body{
 margin:0;
 font-family:Arial, sans-serif;
+background:#04040f;
 color:white;
 text-align:center;
-background:#02020a;
 overflow-x:hidden;
 }
 
-/* ---------- STAR BACKGROUND ---------- */
+/* STARS */
 
 .stars{
 position:fixed;
+top:0;
+left:0;
 width:100%;
 height:100%;
+
 background-image:
 radial-gradient(white 1px, transparent 1px),
 radial-gradient(white 1px, transparent 1px),
 radial-gradient(white 2px, transparent 2px);
+
 background-size:
-80px 80px,
+60px 60px,
 120px 120px,
 200px 200px;
 
-animation:moveStars 120s linear infinite;
+animation:starsMove 150s linear infinite;
 
 z-index:-1;
 opacity:0.8;
 }
 
-@keyframes moveStars{
+@keyframes starsMove{
+
 from{transform:translateY(0);}
 to{transform:translateY(-2000px);}
+
 }
 
-/* ---------- HEADER ---------- */
+/* HEADER */
 
 header{
-padding:80px 20px 40px 20px;
+padding:80px 20px;
 }
 
 h1{
 font-size:48px;
 color:#00ffff;
-text-shadow:0 0 20px cyan;
+text-shadow:0 0 20px #00ffff;
 margin-bottom:10px;
 }
 
 .subtitle{
-opacity:0.8;
 font-size:18px;
+opacity:0.8;
 }
 
-/* ---------- CARD ---------- */
+/* CARD */
 
 .card{
 
 background:rgba(255,255,255,0.05);
 
-margin:30px auto;
-
 padding:30px;
 
-border-radius:18px;
+margin:30px auto;
 
 max-width:700px;
 
-box-shadow:0 0 25px rgba(0,255,255,0.15);
+border-radius:18px;
 
-backdrop-filter:blur(6px);
+box-shadow:0 0 20px rgba(0,255,255,0.15);
 
 }
 
-/* ---------- DOWNLOAD BUTTON ---------- */
+/* DOWNLOAD BUTTON */
 
 .download{
 
@@ -97,7 +98,7 @@ display:inline-block;
 
 margin-top:20px;
 
-padding:16px 45px;
+padding:16px 40px;
 
 font-size:18px;
 
@@ -117,37 +118,67 @@ transition:0.3s;
 
 .download:hover{
 
-transform:scale(1.08);
+transform:scale(1.1);
 
-box-shadow:0 0 40px #00ffff;
+box-shadow:0 0 35px #00ffff;
 
 }
 
-/* ---------- TELEGRAM ---------- */
+/* TELEGRAM */
 
 .telegram{
-
 margin-top:15px;
-
 font-size:16px;
-
 }
 
 .telegram a{
-
 color:#00ffff;
-
 text-decoration:none;
-
 }
 
 .telegram a:hover{
-
 text-shadow:0 0 10px cyan;
+}
+
+/* SUPPORT BUTTON */
+
+.support{
+
+position:fixed;
+
+bottom:20px;
+
+right:20px;
+
+background:linear-gradient(45deg,#ff2d55,#ff0066);
+
+color:white;
+
+padding:14px 22px;
+
+border-radius:30px;
+
+font-size:16px;
+
+text-decoration:none;
+
+box-shadow:0 0 20px rgba(255,0,100,0.7);
+
+transition:0.3s;
+
+z-index:999;
 
 }
 
-/* ---------- FOOTER ---------- */
+.support:hover{
+
+transform:scale(1.1);
+
+box-shadow:0 0 35px #ff0066;
+
+}
+
+/* FOOTER */
 
 footer{
 
@@ -161,12 +192,12 @@ font-size:14px;
 
 }
 
-/* ---------- MOBILE ---------- */
+/* MOBILE */
 
 @media(max-width:600px){
 
 h1{
-font-size:34px;
+font-size:32px;
 }
 
 .subtitle{
@@ -179,7 +210,7 @@ padding:25px;
 }
 
 .download{
-padding:14px 30px;
+padding:14px 28px;
 font-size:16px;
 }
 
@@ -201,14 +232,14 @@ font-size:16px;
 Explore the galaxy. Discover new worlds. Become the ultimate space explorer.
 </p>
 
-<a class="download" href="https://github.com/nestorpirc-prog/SpaceClicker/releases/download/v1.0/SpaceClicker.apk">
-⬇ Download for Android
-</a>
+<a class="download"
+href="https://github.com/nestorpirc-prog/SpaceClicker/releases/download/v1.0/SpaceClicker.apk">
+⬇ Download for Android </a>
 
 <div class="telegram">
 
-Join our Telegram: <a href="https://t.me/SpaceClickerx" target="_blank">
-@SpaceClicker </a>
+Join our Telegram <a href="https://t.me/SpaceClickerGame" target="_blank">
+@SpaceClickerGame </a>
 
 </div>
 
@@ -219,17 +250,17 @@ Join our Telegram: <a href="https://t.me/SpaceClickerx" target="_blank">
 <h2>About the Game</h2>
 
 <p>
-SpaceClicker is a simple and relaxing space themed clicker game where you collect energy and explore the endless universe. 
-Your goal is to travel through space, discover planets, and become the greatest explorer in the galaxy.
+SpaceClicker is a relaxing space themed clicker game where you collect energy and explore the universe.
+Travel between planets, gather resources, and expand your cosmic adventure.
 </p>
 
 <p>
-The game focuses on simple gameplay that anyone can enjoy. 
-Tap to collect energy, progress through space, and unlock new discoveries as you continue your journey through the stars.
+The game is designed for quick and fun gameplay sessions. 
+Tap, progress, and discover more of the galaxy as you continue your journey through space.
 </p>
 
 <p>
-SpaceClicker is designed for quick fun sessions while still giving players a sense of exploration and progress in a mysterious cosmic world.
+Perfect for players who enjoy simple but satisfying gameplay with a cosmic atmosphere.
 </p>
 
 </div>
@@ -239,6 +270,10 @@ SpaceClicker is designed for quick fun sessions while still giving players a sen
 <p>© 2026 SpaceClicker</p>
 
 </footer>
+
+<a href="support.html" class="support">
+❤️ Support
+</a>
 
 </body>
 
