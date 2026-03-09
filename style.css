@@ -166,6 +166,9 @@ margin-top:15px;
 display:inline-flex;
 align-items:center;
 gap:6px;
+width:auto;
+}
+
 
 font-size:13px;
 color:white;
@@ -185,10 +188,10 @@ transform:scale(1.05);
 }
 
 .telegram img{
-width:16px;
-height:16px;
+width:20px;
+height:20px;
+object-fit:contain;
 }
-
 
 /* MINI GAME */
 
